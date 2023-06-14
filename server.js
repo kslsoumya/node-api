@@ -11,6 +11,13 @@ const app = express();
 app.use(bodyParser.json());
 
 
+app.get('/', (req, res) => {
+    // console.log("payload received", req.body)
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.json('Api is working')
+});
+
 
 // defining an endpoint to return all ads
 app.post('/notify', (req, res) => {
