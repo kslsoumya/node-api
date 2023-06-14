@@ -27,6 +27,6 @@ app.post('/notify', (req, res) => {
 //     res.end('Success')
 // })
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
     console.log(`Server running at ${port}/`)
 })
