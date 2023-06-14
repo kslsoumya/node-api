@@ -1,8 +1,6 @@
 const http = require('http');
 const express = require('express');
 const bodyParser = require('body-parser');
-
-const hostname = '0.0.0.0'
 const port = 3000;
 
 
@@ -30,5 +28,5 @@ app.post('/notify', (req, res) => {
 // })
 
 app.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`)
+    console.log(`Server running at ${port}/`)
 })
