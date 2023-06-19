@@ -23,7 +23,7 @@ app.get('/test', (req, res) => {
 app.post('/notify', (req, res) => {
     console.log("payload received", req.body)
     console.log("changed Items", req.body?.changedItems)
-    console.log("Effects", req.body?.changedItems?.effects)
+    console.log("Effects", req.body?.changedItems[0]?.effects)
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.send({ "message": 'Success' })
