@@ -11,7 +11,7 @@ const app = express();
 app.use(bodyParser.json());
 
 
-app.get('/', (req, res) => {
+app.get('/test', (req, res) => {
     // console.log("payload received", req.body)
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -22,6 +22,8 @@ app.get('/', (req, res) => {
 // defining an endpoint to return all ads
 app.post('/notify', (req, res) => {
     console.log("payload received", req.body)
+    console.log("changed Items", req.body?.changedItems)
+    console.log("Effects", req.body?.changedItems?.effects)
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.send({ "message": 'Success' })
